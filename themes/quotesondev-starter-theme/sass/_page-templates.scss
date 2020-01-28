@@ -5,3 +5,53 @@
 /* All Archives Page */
 
 /* Submit a Quote Page */
+
+.logo {
+    width: 300px;
+    height: auto;
+    margin-top: 60px;
+    margin-left: 15px;
+ 
+    @include for-tablet {
+       width: 500px;
+    }
+ 
+    @include for-desktop {
+       width: 700px;
+    }
+ }
+
+
+ /* ARCHIVES */
+ 
+ .archives-container {
+    text-align: left;
+ 
+    & .entry-header {
+       text-align: left;
+    }
+ }
+ 
+ .post-author, .categorys,.tags {
+    & ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        
+       
+    }
+ 
+    & li {
+        font-size: 1.25rem;
+        font-weight: 300;
+        margin-bottom: .5rem;
+        margin-right: 1.125rem;
+        
+       
+    }
+ }
+ 
+
+

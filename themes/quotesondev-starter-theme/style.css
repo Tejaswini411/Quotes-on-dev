@@ -292,7 +292,7 @@ html {
           box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: #222222;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote,
@@ -593,3 +593,36 @@ object {
 --------------------------------------------------------------*/
 /* All Archives Page */
 /* Submit a Quote Page */
+.logo {
+  width: 300px;
+  height: auto;
+  margin-top: 60px;
+  margin-left: 15px; }
+  @media screen and (min-width: 620px) {
+    .logo {
+      width: 500px; } }
+  @media screen and (min-width: 1080px) {
+    .logo {
+      width: 700px; } }
+
+/* ARCHIVES */
+.archives-container {
+  text-align: left; }
+  .archives-container .entry-header {
+    text-align: left; }
+
+.post-author ul, .categorys ul, .tags ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.post-author li, .categorys li, .tags li {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: .5rem;
+  margin-right: 1.125rem; }
