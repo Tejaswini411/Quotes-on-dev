@@ -229,7 +229,7 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
+  color: #fff;
   font-family: sans-serif;
   font-size: 1rem;
   line-height: 1.5; }
@@ -411,11 +411,11 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: #0c0; }
   a:visited {
-    color: purple; }
+    color: #0c0; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: green; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -593,11 +593,18 @@ object {
 --------------------------------------------------------------*/
 /* All Archives Page */
 /* Submit a Quote Page */
+.hfeed.site {
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: 2.5%;
+  width: 100%; }
+
+.site-branding {
+  text-align: center; }
+
 .logo {
   width: 300px;
-  height: auto;
-  margin-top: 60px;
-  margin-left: 15px; }
+  height: auto; }
   @media screen and (min-width: 620px) {
     .logo {
       width: 500px; } }
@@ -611,7 +618,7 @@ object {
   .archives-container .entry-header {
     text-align: left; }
 
-.post-author ul, .categorys ul, .tags ul {
+.post-author ul, .category ul, .tags ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -621,8 +628,61 @@ object {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
-.post-author li, .categorys li, .tags li {
+.post-author li, .category li, .tags li {
   font-size: 1.25rem;
   font-weight: 300;
   margin-bottom: .5rem;
   margin-right: 1.125rem; }
+
+/* FOOTER */
+footer .site-info {
+  padding: 2.5%; }
+  footer .site-info .page-item-206 {
+    display: none; }
+  @media screen and (min-width: 620px) {
+    footer .site-info {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      footer .site-info p {
+        margin-top: 0; } }
+  @media screen and (min-width: 1080px) {
+    footer .site-info {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
+      footer .site-info p {
+        margin-top: 0; } }
+
+footer .menu ul {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+  footer .menu ul li:first-child {
+    margin: 0;
+    padding-left: 0; }
+  footer .menu ul li:last-child {
+    margin: 0;
+    border-right: none; }
+  footer .menu ul li {
+    margin: 0;
+    border-right: 1px solid #fff;
+    padding: 0 1rem; }
+  footer .menu ul a {
+    font-weight: 300;
+    text-decoration: none; }
+
+footer p {
+  margin-bottom: 0;
+  font-size: 1rem;
+  color: #fff; }

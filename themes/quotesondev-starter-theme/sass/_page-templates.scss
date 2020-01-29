@@ -5,12 +5,23 @@
 /* All Archives Page */
 
 /* Submit a Quote Page */
+.hfeed.site {
+    margin: 0 auto;
+    max-width: 1080px;
+    padding: 2.5%;
+    width: 100%;
+}
+
+
+.site-branding{
+    text-align: center;
+}
+
 
 .logo {
     width: 300px;
     height: auto;
-    margin-top: 60px;
-    margin-left: 15px;
+    
  
     @include for-tablet {
        width: 500px;
@@ -30,9 +41,10 @@
     & .entry-header {
        text-align: left;
     }
- }
  
- .post-author, .categorys,.tags {
+}
+
+ .post-author, .category, .tags {
     & ul {
         margin: 0;
         padding: 0;
@@ -52,6 +64,80 @@
        
     }
  }
+
+ 
  
 
 
+
+
+
+
+
+
+
+ /* FOOTER */
+
+ footer{
+
+    .site-info{
+      padding: 2.5%;
+        
+      .page-item-206{
+          display: none;
+      }
+      @include for-tablet {
+        display: flex;
+        p{
+        margin-top: 0;
+        }
+     }
+
+    @include for-desktop {
+       display: flex;
+       justify-content: flex-end;
+       p{
+       margin-top: 0;
+       }
+    }
+
+    }
+
+    .menu ul{
+      margin: 0;
+      padding: 0;
+      font-size: 1rem;
+      list-style: none;
+      display: flex;
+      justify-content: flex-start;
+      
+      li:first-child{
+        margin: 0;
+        padding-left: 0;
+        
+      }
+      li:last-child{
+        margin: 0;
+        border-right: none;
+        
+      }
+      li{
+        margin: 0;
+        border-right: 1px solid #fff;
+        padding: 0 1rem;
+        
+      }
+      a{
+        font-weight: 300;
+        text-decoration: none;
+        
+      }
+    }
+    p {
+      margin-bottom: 0;
+      font-size: 1rem;
+      color: #fff;
+    }
+
+  } 
+  
