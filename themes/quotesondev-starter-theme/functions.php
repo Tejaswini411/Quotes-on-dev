@@ -60,8 +60,19 @@ function qod_scripts() {
 
 	wp_enqueue_script( 'qod-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'qod-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'qod-script', get_template_directory_uri() . '/build/js/main.min.js', array('jquery'), null, true );
+	wp_enqueue_script( 'qod-fa-cdn', "https://kit.fontawesome.com/c14e7bafd7.js", array(), '20151215', true );
+
+	//  Localized script code, reference qod-script
+	wp_localize_script('qod-script', 'qod_api', array(
+		'rest_url' => rest_url(),
+		'home_url' => home_url(),
+		'nonce'    => wp_create_nonce('wp_rest')
+	));
 }
+
 add_action( 'wp_enqueue_scripts', 'qod_scripts' );
+
 
 /**
  * Custom functions that act independently of the theme templates.
