@@ -1,9 +1,8 @@
+// var currentQuote = "";
+// var currentAuthor = "";
 
 (function($) {
   $(function() {
-    // get request for wp/v2/posts
-
-    
 
     $('.show-me').on('click', function(event) {
       event.preventDefault();
@@ -16,8 +15,10 @@
       })
         .done(function(data) {
           console.log(data);
-
-          $('#quote-author').text(data[0].slug);
+          
+          window.location.href = data[0].link;
+          // $('#quote-author').text(data[0].slug);
+          // $('.quote').text(data[0].content.rendered);
 
         })
         .fail(function(err) {
@@ -28,4 +29,20 @@
 })(jQuery);
 
 
-  
+(function( $ ) {
+$(".show-me").on("click", function(event) {
+  event.preventDefault();
+  $.ajax({
+    method: "post",
+    url: qod_api.rest_url + "wp/v2/posts/" + qod_api.post_id,
+    data: {
+      comment_status: "closed"
+    },
+    beforeSend: function(xhr) {
+      xhr.setRequestHeader("X-WP-Nonce", qod_api.wpapi_nonce);
+    }
+  }).done(function(response) {
+    alert("Success! Comments are closed for this post.");
+  });
+});
+})( jQuery );

@@ -12,10 +12,54 @@
     max-width: 1080px;
     padding: 2.5%;
     width: 100%;
+    position: relative;
 
+    .fa-quote-left, .fa-quote-right{
+      display: none;
+      }
+    
+      @include for-tablet {
+        .fa-quote-left, .fa-quote-right{
+        display: none;
+        }
+      }
+
+      @include for-desktop {
+        .fa-quote-left, .fa-quote-right{
+          color: #0c0;
+          font-family: FontAwesome;
+          font-size: 125px;
+          line-height: 125px;
+          position: absolute;
+          display: inline;
+        }
+
+        .fa-quote-right{
+            right: 0;
+        }
+      }
+    
+      
+
+      .entry-content{
+        padding-top: 12px;
+        text-align: center;  
+        font-size: 1.3rem;
+        margin-bottom: $base__space-unit*2;
+        width: 100%;
+      
+              @include for-tablet {
+                  font-size: 1.7rem;
+              }
+      
+              @include for-desktop {
+                  font-size: 2.5rem;
+              }
+          
+      }
+    
     .button-wrapper{
-      padding-left: 400px;
-      padding-top: 250px;
+      text-align: center;
     }
 
     .show-me{
@@ -31,12 +75,20 @@
       padding: .75rem 2.25rem
 
   }
-  
+      @include for-desktop {
+      .content-wrapper{
+        width: 700px;
+        margin: 0 auto;
+      }
+      }  
 }
+
+
 
 
 .site-branding{
     text-align: center;
+    padding-top: 60px;
 }
 
 

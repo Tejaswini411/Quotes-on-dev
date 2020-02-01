@@ -28,7 +28,10 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+			<?php the_posts_pagination( array(
+				'prev_text' => __( '&larr; Previous', 'textdomain' ),
+				'next_text' => __( 'Next &rarr;', 'textdomain' ),
+			) ); ?>
 
 		<?php else : ?>
 

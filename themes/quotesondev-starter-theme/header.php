@@ -30,5 +30,7 @@
 			</div><!-- .site-branding -->
 		</header><!-- #masthead -->
 		<div id="content" class="site-content">
-			<div class="content-with-quotes">
+			
 				<div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+				<div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+			<div class="content-wrapper"> 
