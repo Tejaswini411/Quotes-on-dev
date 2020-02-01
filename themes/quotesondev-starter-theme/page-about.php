@@ -13,16 +13,15 @@ get_header(); ?>
 
       <?php while (have_posts()) : the_post(); ?>
 
-        <?php get_template_part('template-parts/content', 'page'); ?>
+        <?php get_template_part('template-parts', 'content'); ?>
 
       <?php endwhile; // End of the loop. 
-      ?>
+      ?> 
     </main><!-- #main -->
     <p class="main">Quotes on Dev is a project site for the RED Academy Web Developer Professional program.
       It’s used to experiment with Ajax, WP API, jQuery, and other cool things. 🙂</p>
     <p>This site is heavily inspired by Chris Coyier’s Quotes on Design.</p>
 
-    </p>
   </div><!-- #primary -->
 </div>
 

@@ -1,5 +1,4 @@
-// var currentQuote = "";
-// var currentAuthor = "";
+
 
 (function($) {
   $(function() {
@@ -16,33 +15,47 @@
         .done(function(data) {
           console.log(data);
           
-          window.location.href = data[0].link;
-          // $('#quote-author').text(data[0].slug);
-          // $('.quote').text(data[0].content.rendered);
+         // window.location.href = data[0].link;
+           $('#quote-author').text(data[0].slug);
+           $('.quote').html(data[0].content.rendered);
 
         })
         .fail(function(err) {
           console.log('error', err);
         });
-    }); //end of button click
-  }); //end of doc ready
-})(jQuery);
+    }); 
+  }); 
 
 
-(function( $ ) {
-$(".show-me").on("click", function(event) {
-  event.preventDefault();
+
+$('form').on('submit', function(event) {
+  
+
+  let $valAuthor = $('#author').val().trim().length < 1 ? null : $('#author').val(),
+              $valContent = $('#quote').val().trim().length < 1 ? null : $('#quote').val(),
+              $valSource = $('#source').val().trim().length < 1 ? null : $('#source').val(),
+              $valUrl = $('#url').val().trim().length < 1 ? null : $('#url').val();
+  
+              event.preventDefault();
+
   $.ajax({
-    method: "post",
-    url: qod_api.rest_url + "wp/v2/posts/" + qod_api.post_id,
+    method: 'post',
+    url: qod_api.rest_url + 'wp/v2/posts/',
     data: {
-      comment_status: "closed"
+                  title: $valAuthor,
+                  content: $valContent,
+                  _qod_quote_source: $valSource,
+                  _qod_quote_source_url: $valUrl
     },
     beforeSend: function(xhr) {
-      xhr.setRequestHeader("X-WP-Nonce", qod_api.wpapi_nonce);
+      xhr.setRequestHeader('X-WP-Nonce', qod_api.nonce);
     }
-  }).done(function(response) {
-    alert("Success! Comments are closed for this post.");
+  })
+  .done(function() {
+    alert('Success! Comments are closed for this post.');
+  })
+  .fail(function(){
+    alert('submission failed')
   });
 });
 })( jQuery );

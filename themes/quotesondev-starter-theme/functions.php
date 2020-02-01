@@ -7,6 +7,8 @@
  * @package QOD_Starter_Theme
  */
 
+
+
 if ( ! function_exists( 'qod_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -56,7 +58,10 @@ add_filter( 'stylesheet_uri', 'qod_minified_css', 10, 2 );
  * Enqueue scripts and styles.
  */
 function qod_scripts() {
+	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', null, null, true);
 	wp_enqueue_style( 'qod-style', get_stylesheet_uri() );
+
+
 
 	wp_enqueue_script( 'qod-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'qod-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
@@ -65,8 +70,8 @@ function qod_scripts() {
 
 	//  Localized script code, reference qod-script
 	wp_localize_script('qod-script', 'qod_api', array(
-		'rest_url' => rest_url(),
-		'home_url' => home_url(),
+		'rest_url' => esc_url_raw(rest_url()),
+		'home_url' => esc_url_raw(home_url()),
 		'nonce'    => wp_create_nonce('wp_rest')
 	));
 }
@@ -93,3 +98,5 @@ require get_template_directory() . '/inc/metaboxes.php';
  * Custom WP API modifications.
  */
 require get_template_directory() . '/inc/api.php';
+
+
