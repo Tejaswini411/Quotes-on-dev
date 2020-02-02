@@ -1,5 +1,3 @@
-
-
 (function($) {
   $(function() {
 
@@ -18,7 +16,26 @@
          // window.location.href = data[0].link;
            $('#quote-author').text(data[0].slug);
            $('.quote').html(data[0].content.rendered);
-
+           if (data[0]._qod_quote_source && data[0]._qod_quote_source_url) {
+            $('.quote-source').html(
+                '<div class=\'quote-source\'>, <a href=\'' +
+                data[0]._qod_quote_source_url +
+                '\'>' +
+                data[0]._qod_quote_source +
+                '</a></div>'
+            );
+        } else if (
+            data[0]._qod_quote_source &&
+            !data[0]._qod_quote_source_url
+        ) {
+            $('.quote-source').html(
+                '<div class=\'source\' id=\'source\'>, ' +
+                data[0]._qod_quote_source +
+                '</div>'
+            );
+        } else {
+            $('.quote-source').html('');
+        }
         })
         .fail(function(err) {
           console.log('error', err);
@@ -44,6 +61,7 @@ $('form').on('submit', function(event) {
     data: {
                   title: $valAuthor,
                   content: $valContent,
+                  post_status: 'publish',
                   _qod_quote_source: $valSource,
                   _qod_quote_source_url: $valUrl
     },
