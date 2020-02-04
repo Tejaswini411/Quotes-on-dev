@@ -43,15 +43,26 @@
 
       .entry-content{
         
-        padding-top: 12px;
+        //padding-top: 12px;
         text-align: left;  
-        font-size: 1.3rem;
+        font-size: 1rem;
         margin-bottom: $base__space-unit*2;
+        text-decoration: none;
         width: 100%;
+
+        a{
+          text-decoration: none;
+        }
 
         span {
           font-size: 1.25rem;
           text-transform: capitalize;
+        }
+         .quote-source{
+          display: inline;
+        }
+        .source {
+          display: inline;
         }
       
               @include for-tablet {
@@ -119,6 +130,7 @@
  
     @include for-desktop {
        width: 700px;
+       display: inline;
     }
  }
 

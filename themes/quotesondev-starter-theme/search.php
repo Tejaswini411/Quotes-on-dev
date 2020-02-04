@@ -23,6 +23,8 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
+
+
 			<?php qod_numbered_pagination(); ?>
 
 		<?php else : ?>

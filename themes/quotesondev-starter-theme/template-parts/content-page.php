@@ -28,12 +28,23 @@ $source_url = get_post_meta(get_the_ID(), '_qod_quote_source_url', true);
 		<span class="author" id="quote-author"><?php the_title(); ?></span>
 
 		<?php if ($source && $source_url) : ?>
-			<span class="quote-source">, <a href="<?php echo $source_url ?>"><?php echo $source ?></a></span>
+			<span class="quote-source">, 
+				<a href="<?php echo $source_url ?>">
+				<?php echo $source ?>
+				</a>
+			</span>
+
+
 		<?php elseif ($source) : ?>
-			<span class="quote-source"><?php echo $source ?></span>
+			<span class="quote-source">
+				<?php echo $source ?>
+			</span>
+
+
 		<?php else : ?>
-			<span class="quote-source"><span>
-				<?php endif; ?>
+			<span class="quote-source">
+			</span>
+		<?php endif; ?>
 
 		<?php endforeach; ?>
 		<?php wp_reset_postdata(); ?>

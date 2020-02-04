@@ -18,6 +18,10 @@ get_header(); ?>
 
 		<?php endwhile; // End of the loop. ?>
 
+		<div class="button-wrapper">
+			<button class="show-me">Show me another!</button>
+		</div>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

@@ -36,7 +36,14 @@
         } else {
             $('.quote-source').html('');
         }
+           //History api 
+        const url = qod_api.home_url + '/' + data[0].slug + '/';
+        history.pushState(null , null , url);
+
         })
+
+       
+
         .fail(function(err) {
           console.log('error', err);
         });

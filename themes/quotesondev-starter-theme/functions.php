@@ -99,4 +99,17 @@ require get_template_directory() . '/inc/metaboxes.php';
  */
 require get_template_directory() . '/inc/api.php';
 
-
+// Post per page modifications.
+function twpp_change_posts_per_page($query)
+{
+	if (is_admin() || !$query->is_main_query()) {
+		return;
+	}
+	if ($query->is_search()) {
+		$query->set('posts_per_page', 10);
+	}
+	if ($query->is_category()) {
+		$query->set('posts_per_page', 5);
+	}
+}
+add_action('pre_get_posts', 'twpp_change_posts_per_page');

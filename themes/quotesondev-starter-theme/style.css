@@ -675,14 +675,20 @@ object {
     .hfeed.site .fa-quote-right {
       right: 0; } }
   .hfeed.site .entry-content {
-    padding-top: 12px;
     text-align: left;
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin-bottom: 3rem;
+    text-decoration: none;
     width: 100%; }
+    .hfeed.site .entry-content a {
+      text-decoration: none; }
     .hfeed.site .entry-content span {
       font-size: 1.25rem;
       text-transform: capitalize; }
+    .hfeed.site .entry-content .quote-source {
+      display: inline; }
+    .hfeed.site .entry-content .source {
+      display: inline; }
     @media screen and (min-width: 620px) {
       .hfeed.site .entry-content {
         font-size: 1.75rem; } }
@@ -723,7 +729,8 @@ object {
       width: 500px; } }
   @media screen and (min-width: 1080px) {
     .logo {
-      width: 700px; } }
+      width: 700px;
+      display: inline; } }
 
 /* ARCHIVES */
 .archives-container {
