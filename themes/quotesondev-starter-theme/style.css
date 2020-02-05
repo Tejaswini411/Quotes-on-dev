@@ -684,6 +684,8 @@ object {
     margin-bottom: 3rem;
     text-decoration: none;
     width: 100%; }
+    .hfeed.site .entry-content .login-page {
+      font-size: 1rem; }
     .hfeed.site .entry-content a {
       text-decoration: none;
       font-size: 1.25rem;

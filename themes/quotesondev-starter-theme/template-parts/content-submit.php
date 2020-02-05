@@ -36,7 +36,7 @@
 				<input type="submit" value="Submit quote" id="submit-quote">
 			</form>
 		<?php else : ?>
-			<p>Sorry, you must be logged in to submit a quote!</p>
+			<p class="login-page">Sorry, you must be logged in to submit a quote!</p>
 			<a href= "<?php echo esc_url( home_url( '/wp-login.php' ) ); ?>">Click here to login.</a>
 		<?php endif; ?>
 	</div><!-- .entry-content -->
