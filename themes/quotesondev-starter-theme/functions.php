@@ -111,5 +111,8 @@ function twpp_change_posts_per_page($query)
 	if ($query->is_category()) {
 		$query->set('posts_per_page', 5);
 	}
+	if ($query->is_tag()) {
+		$query->set('posts_per_page', 5);
+	}
 }
 add_action('pre_get_posts', 'twpp_change_posts_per_page');

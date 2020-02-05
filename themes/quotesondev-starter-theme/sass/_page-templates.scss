@@ -8,6 +8,14 @@
 
 .hfeed.site {
  
+   
+
+    article
+    {
+      font-size: 1rem;
+      line-height: 1.5;
+    } 
+    
     margin: 0 auto;
     max-width: 1080px;
     padding: 2.5%;
@@ -39,31 +47,39 @@
         }
       }
     
-      
 
       .entry-content{
         
         //padding-top: 12px;
         text-align: left;  
         font-size: 1rem;
+        font-weight: 300;
         margin-bottom: $base__space-unit*2;
         text-decoration: none;
         width: 100%;
 
         a{
           text-decoration: none;
+          font-size: 1.25rem;
+          font-style: italic;
         }
 
         span {
-          font-size: 1.25rem;
+         
           text-transform: capitalize;
+          font-size: 1.25rem;
+          font-weight: 300;
         }
+
          .quote-source{
           display: inline;
         }
+
         .source {
           display: inline;
         }
+
+        
       
               @include for-tablet {
                   font-size: 1.75rem;
@@ -109,6 +125,10 @@
       }  
 }
 
+.qod-direct{
+  text-decoration: none;
+}
+
 
 
 
@@ -142,11 +162,17 @@
  
     & .entry-header {
        text-align: left;
+       
     }
  
 }
 
  .post-author, .category, .tags {
+
+       a:link {
+        text-decoration: none;
+              }
+
     & ul {
         margin: 0;
         padding: 0;
@@ -166,55 +192,17 @@
        
     }
  }
+ .post-author, .category, .tags{
+   margin-top: 3rem;
+ }
 
+
+ .archive {
  
+    .entry-header{
+      font-size: 1.25rem;
+    }
  
- .page-id-15{
- 
-  .post-archives ul{
-   
-      list-style: none;
-      margin-left: 0;
-      padding-left: 0;
-      display: flex;
-      flex-wrap: wrap;
-
-      li{
-          font-size: 1rem;
-          margin-bottom: .5rem;
-          margin-right: 1.125rem;
-      }
-  }
-
-  .categories-archives ul{
-
-      list-style: none;
-      margin-left: 0;
-      padding-left: 0;
-      display: flex;
-      flex-wrap: wrap;
-
-      li{
-          font-size: 1rem;
-          margin-bottom: .5rem;
-          margin-right: 1.125rem;
-      }
-  }
-
-  .tag-archives {
-      list-style: none;
-      margin-left: 0;
-      padding-left: 0;
-      display: flex;
-      flex-wrap: wrap;
-
-      li{
-          font-size: 1rem;
-          margin-bottom: .5rem;
-          margin-right: 1.125rem;
-      }
-  }
-
 }
 
 
@@ -247,7 +235,7 @@
  footer{
 
     .site-info{
-  padding-top: 40px;
+  padding-top: 80px;
         
       .page-item-206{
           display: none;

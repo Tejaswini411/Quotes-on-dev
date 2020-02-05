@@ -8,18 +8,17 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main single-quote" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'template-parts/content', 'single' ); ?>
-
+			<?php get_template_part( 'template-parts/content-page'); ?>
 
 		<?php endwhile; // End of the loop. ?>
 
-		<div class="button-wrapper">
+		  <div class="button-wrapper">
 			<button class="show-me">Show me another!</button>
-		</div>
+		</div> 
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

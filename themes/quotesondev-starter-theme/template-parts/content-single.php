@@ -25,7 +25,7 @@ $source_url = get_post_meta(get_the_ID(), '_qod_quote_source_url', true);
 		<div class="quote" id="new-quote"> 
 			<?php the_content(); ?> 
 		</div>
-		<span class="author" id="quote-author"> <?php the_title(); ?></span>
+		<span class="author" id="quote-author"><span>-</span><?php the_title(); ?></span>
 
 		<?php if ($source && $source_url) : ?>
 			<span class="quote-source">, <a href="<?php echo $source_url ?>"><?php echo $source ?></a></span>

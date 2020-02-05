@@ -659,6 +659,9 @@ object {
   padding: 2.5%;
   width: 100%;
   position: relative; }
+  .hfeed.site article {
+    font-size: 1rem;
+    line-height: 1.5; }
   .hfeed.site .fa-quote-left, .hfeed.site .fa-quote-right {
     display: none; }
   @media screen and (min-width: 620px) {
@@ -677,14 +680,18 @@ object {
   .hfeed.site .entry-content {
     text-align: left;
     font-size: 1rem;
+    font-weight: 300;
     margin-bottom: 3rem;
     text-decoration: none;
     width: 100%; }
     .hfeed.site .entry-content a {
-      text-decoration: none; }
-    .hfeed.site .entry-content span {
+      text-decoration: none;
       font-size: 1.25rem;
-      text-transform: capitalize; }
+      font-style: italic; }
+    .hfeed.site .entry-content span {
+      text-transform: capitalize;
+      font-size: 1.25rem;
+      font-weight: 300; }
     .hfeed.site .entry-content .quote-source {
       display: inline; }
     .hfeed.site .entry-content .source {
@@ -716,6 +723,9 @@ object {
       width: 700px;
       margin: 0 auto; } }
 
+.qod-direct {
+  text-decoration: none; }
+
 .site-branding {
   text-align: center;
   padding-top: 60px; }
@@ -738,6 +748,9 @@ object {
   .archives-container .entry-header {
     text-align: left; }
 
+.post-author a:link, .category a:link, .tags a:link {
+  text-decoration: none; }
+
 .post-author ul, .category ul, .tags ul {
   margin: 0;
   padding: 0;
@@ -754,47 +767,11 @@ object {
   margin-bottom: .5rem;
   margin-right: 1.125rem; }
 
-.page-id-15 .post-archives ul {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-  .page-id-15 .post-archives ul li {
-    font-size: 1rem;
-    margin-bottom: .5rem;
-    margin-right: 1.125rem; }
+.post-author, .category, .tags {
+  margin-top: 3rem; }
 
-.page-id-15 .categories-archives ul {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-  .page-id-15 .categories-archives ul li {
-    font-size: 1rem;
-    margin-bottom: .5rem;
-    margin-right: 1.125rem; }
-
-.page-id-15 .tag-archives {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-  .page-id-15 .tag-archives li {
-    font-size: 1rem;
-    margin-bottom: .5rem;
-    margin-right: 1.125rem; }
+.archive .entry-header {
+  font-size: 1.25rem; }
 
 .archive .page-title,
 .search .page-title {
@@ -807,7 +784,7 @@ object {
 
 /* FOOTER */
 footer .site-info {
-  padding-top: 40px; }
+  padding-top: 80px; }
   footer .site-info .page-item-206 {
     display: none; }
   @media screen and (min-width: 620px) {

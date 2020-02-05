@@ -14,7 +14,8 @@
 		<?php the_excerpt(); ?>
 
 		<header class="entry-header">
-	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		
+		<span>- </span><?php the_title( ); ?>
 	</header><!-- .entry-header -->
 
 	

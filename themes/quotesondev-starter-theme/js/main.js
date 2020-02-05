@@ -1,20 +1,21 @@
 (function($) {
   $(function() {
-
+    let lastPage ='';
     $('.show-me').on('click', function(event) {
       event.preventDefault();
-
+      lastPage = document.URL;
       $.ajax({
         method: 'get',
         url:
           qod_api.rest_url +
-          'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1'
+          'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1',
+          cache: !1
       })
         .done(function(data) {
           console.log(data);
           
          // window.location.href = data[0].link;
-           $('#quote-author').text(data[0].slug);
+           $('#quote-author').html('- ' + data[0].title.rendered);
            $('.quote').html(data[0].content.rendered);
            if (data[0]._qod_quote_source && data[0]._qod_quote_source_url) {
             $('.quote-source').html(
@@ -47,8 +48,17 @@
         .fail(function(err) {
           console.log('error', err);
         });
-    }); 
-  }); 
+      });
+
+
+      //Add history api popstate
+      $(window).on('popstate', function () {
+        if (1 === window
+            .location
+            .hash
+            .indexOf('qm-overview')) { return !1; }
+        window.location.replace(lastPage);
+    });
 
 
 
@@ -82,5 +92,6 @@ $('form').on('submit', function(event) {
   .fail(function(){
     alert('submission failed')
   });
+});
 });
 })( jQuery );

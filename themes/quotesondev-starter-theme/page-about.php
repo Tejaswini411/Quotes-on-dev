@@ -19,7 +19,7 @@ get_header(); ?>
     </main><!-- #main -->
     <p class="main">Quotes on Dev is a project site for the RED Academy Web Developer Professional program.
       It’s used to experiment with Ajax, WP API, jQuery, and other cool things. 🙂</p>
-    <p>This site is heavily inspired by Chris Coyier’s Quotes on Design.</p>
+    <p>This site is heavily inspired by Chris Coyier’s <a class="qod-direct" href="http://quotesondesign.com/">Quotes on Design.</a> </p>
 
   </div><!-- #primary -->
 </div>
