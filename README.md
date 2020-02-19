@@ -50,6 +50,6 @@ And now would be a good time to `git init` :)
 4. Endpoint Parameters
 5.  wp_enqueue_script
 
-![Preview](./themes/quotesondev-starter-theme/images/About.png)
+![Preview](./themes/quotesondev-starter-theme/images/about.png)
 ![Preview](./themes/quotesondev-starter-theme/images/archive.png)
 ![Preview](./themes/quotesondev-starter-theme/images/Submit.png)
